@@ -1,0 +1,14 @@
+{
+    "name": "@ziqian/core",
+    "version": "0.0.0",
+    "main": "./src/index.ts",
+    "type": "module",
+    "buildOptions": {
+        "name": "ZiQianCore",
+        "formats": [
+            "esm-bundler",
+            "cjs",
+            "global"
+        ]
+    }
+}

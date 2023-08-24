@@ -1,0 +1,50 @@
+{
+  "name": "ziqian-ci",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A mini Vue project",
+  "main": "index.js",
+  "type": "module",
+  "bin": "./dist/core.esm.js",
+  "scripts": {
+    "dev": "node ./scripts/build.js --dev",
+    "build": "node ./scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "buildOptions": {
+    "name": "ZiQian",
+    "formats": [
+      "esm-bundler",
+      "cjs",
+      "global"
+    ]
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "template"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/repository.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/repository/issues"
+  },
+  "homepage": "https://github.com/username/repository#readme",
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@types/node": "^20.5.3",
+    "execa": "^7.2.0",
+    "rollup": "^3.27.2",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}

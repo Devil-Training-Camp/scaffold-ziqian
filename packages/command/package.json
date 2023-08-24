@@ -1,0 +1,14 @@
+{
+    "name": "@ziqian/command",
+    "version": "0.0.0",
+    "main": "./src/index.ts",
+    "type": "module",
+    "buildOptions": {
+        "name": "ZiQianCommand",
+        "formats": [
+            "esm-bundler",
+            "cjs",
+            "global"
+        ]
+    }
+}
