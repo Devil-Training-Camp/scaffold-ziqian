@@ -10,5 +10,8 @@
             "cjs",
             "global"
         ]
+    },
+    "dependencies": {
+        "@ziqian/lib": "workspace:^"
     }
 }
