@@ -1,7 +1,6 @@
 /dist
 # node_modules should be ignored
-/node_modules
-
+node_modules
 # Ignore logs
 /logs
 *.log

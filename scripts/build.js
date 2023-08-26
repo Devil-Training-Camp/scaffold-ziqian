@@ -2,17 +2,18 @@
 import fs from 'fs'
 import { execa } from 'execa'
 import minimist from 'minimist';
+import path from 'path'
 const argv = minimist(process.argv.slice(2));
 const isDev = argv['dev'] ? argv['dev'] : false
 let target = argv['target'] ? argv['target'] : fs.readdirSync('packages').filter((name) => {
     return fs.statSync(`packages/${name}`).isDirectory()
 })
-
+const buildScriptPath = path.join(process.cwd(), 'build/vite.config.js')
 const dirs = target
-
+console.log(buildScriptPath)
 function build(target) {
-    const baseFormat = isDev ? '-wc' : '-c'
-    return execa('rollup', [baseFormat, '--environment', `TARGET:${target}`], {
+    const baseFormat = isDev ? '' : 'build'
+    return execa('vite', [baseFormat,'--config', buildScriptPath,`TARGET:${target}`], {
         stdio: 'inherit'
     })
 }
