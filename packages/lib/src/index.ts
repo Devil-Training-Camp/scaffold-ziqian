@@ -4,5 +4,8 @@ export default {
     },
     divide(a: number, b: number): number {
         return a / b;
+    },
+    getName() {
+        return 'a'
     }
 }

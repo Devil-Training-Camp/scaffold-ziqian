@@ -12,8 +12,8 @@ const buildScriptPath = path.join(process.cwd(), 'build/vite.config.js')
 const dirs = target
 console.log(buildScriptPath)
 function build(target) {
-    const baseFormat = isDev ? '' : 'build'
-    return execa('vite', [baseFormat,'--config', buildScriptPath,`TARGET:${target}`], {
+    const base = isDev ? ['build', '--watch'] : ['build']
+    return execa('vite', [...base, '--config', buildScriptPath,`TARGET:${target}`], {
         stdio: 'inherit'
     })
 }
